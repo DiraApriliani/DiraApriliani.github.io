@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ubah Text dan Warna</title>
+</head>
+<body>
+    <h1 id="judul">Mengubah Teks dan Warna</h1>
+    <p id="paragraf">Klik button di bawah ini untuk mengubah teks dan warna pada halaman ini</p>
+    <button onclick="ubahTextDanWarna()">Ubah Text dan Warna</button>
+
+    <script>
+        function ubahTextDanWarna() {
+            var paragrafElement = document.getElementById("paragraf");
+            paragrafElement.textContent = "Teks dan warna pada halaman ini telah diubah";
+
+            // Mengubah warna teks
+            var judulElement = document.getElementById("judul");
+            var paragrafElement = document.getElementById("paragraf");
+
+            judulElement.style.color = "purple";
+            paragrafElement.style.color = "white";
+            paragrafElement.style.fontSize = "20px" ;
+
+            // Mengubah warna latar belakang
+            document.body.style.backgroundColor = "lightblue";
+        }
+    </script>
+</body>
+</html>
