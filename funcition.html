@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konversi Suhu</title>
+    <style>
+        body {
+        background: linear-gradient(#f87ddd, #30ffa9);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        }
+        .tampil{
+        padding: 20px;
+        border: 2px solid #1b201c;
+        border-radius: 15px;
+        background-color: #fff;
+        color: #000000;
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+        box-shadow: 0 0 50px rgba(41, 40, 40, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="tampil">
+    <h2>Konversi Suhu dari Celsius ke Fahrenheit</h2>
+    <p>Masukkan suhu dalam derajat Celsius:</p>
+    <input type="number" id="celsiusInput">
+    <button onclick="convertTemperature()">Konversi</button>
+    <p>Hasil konversi:</p>
+    <p id="result"></p>
+    </div>
+
+    <script>
+        function convertTemperature() {
+            var celsius = parseFloat(document.getElementById("celsiusInput").value);
+            var fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById("result").innerHTML = celsius + "°C sama dengan " + fahrenheit + "°F";
+        }
+    </script>
+</body>
+</html>
